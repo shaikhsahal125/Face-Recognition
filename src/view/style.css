@@ -1,0 +1,4 @@
+.bodybg {
+    -fx-background-image: url('/view/style.css');
+    -fx-background-size: 100% 100%;
+}
