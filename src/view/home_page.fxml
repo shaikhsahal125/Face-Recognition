@@ -12,13 +12,13 @@
          <Font name="Arial Bold Italic" size="60.0"/>
       </font>
    </Text>
-   <Button onAction="#recognizeBtnCtrl" layoutX="185.0" layoutY="157.0" mnemonicParsing="false" text="Recognize"
+   <Button fx:id="recognizeBtn" onAction="#recognizeBtnCtrl" layoutX="185.0" layoutY="157.0" mnemonicParsing="false" text="Recognize"
            textFill="#0eb247">
       <font>
          <Font name="Times New Roman Bold" size="48.0"/>
       </font>
    </Button>
-   <Button onAction="#addFaceBtnCtrl" layoutX="189.0" layoutY="273.0" mnemonicParsing="false" text="Add New Face">
+   <Button fx:id="addFaceBtn" onAction="#addFaceBtnCtrl" layoutX="189.0" layoutY="273.0" mnemonicParsing="false" text="Add New Face">
       <font>
          <Font name="Times New Roman" size="36.0"/>
       </font>
