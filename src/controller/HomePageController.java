@@ -8,7 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
 
 public class HomePageController {
     @FXML
@@ -16,6 +19,7 @@ public class HomePageController {
 
     @FXML
     Button addFaceBtn;
+
 
     public void recognizeBtnCtrl(ActionEvent event) throws IOException {
         System.out.println("Recognize Btn clicked");
@@ -39,8 +43,19 @@ public class HomePageController {
     }
 
 
-    public void addFaceBtnCtrl(ActionEvent event) {
+    public void addFaceBtnCtrl(ActionEvent event) throws IOException {
         System.out.println("Add face Btn clicked");
+        ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/model/addFace.py", "Sahal", "/Users/sahalshaih/Downloads/catTuring.jpeg").redirectErrorStream(true);
+        Process process = processBuilder.start();
+
+        Reader reader = new InputStreamReader(process.getInputStream());
+        BufferedReader bufferedReader = new BufferedReader(reader);
+
+        String s;
+
+        while ((s = bufferedReader.readLine()) != null) {
+            System.out.println(s);
+        }
     }
 
 }
