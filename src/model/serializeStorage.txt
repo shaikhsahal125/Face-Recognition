@@ -1,1 +1,0 @@
-{"Sahal": "/Users/sahalshaih/My_Stuff/love/projects/Face-Recognition/src/model/images"}

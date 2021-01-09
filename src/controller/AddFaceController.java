@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 
 import java.io.*;
 
@@ -26,6 +27,13 @@ public class AddFaceController {
     }
 
     public void browse(ActionEvent event) {
+        System.out.println("Browse btn clicked");
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image File Types", "*.png", "*.jpg", "*.jpeg"));
+
+        File file = fileChooser.showOpenDialog(browseBtn.getScene().getWindow());
+        inputPath.setText(file.getPath());
 
     }
 
@@ -46,7 +54,7 @@ public class AddFaceController {
             return;
         }
 
-        ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/model/addFace.py", name, "/Users/sahalshaih/Downloads/catTuring.jpeg").redirectErrorStream(true);
+        ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/model/addFace.py", name, imgPath).redirectErrorStream(true);
         Process process = processBuilder.start();
 
         Reader reader = new InputStreamReader(process.getInputStream());
