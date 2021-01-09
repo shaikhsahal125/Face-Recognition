@@ -21,7 +21,7 @@ except:
     pass
 
 # print(people_dict)
-
+image_id = len(people_dict)
 
 destination = os.getcwd() + "/src/model/images"
 copy(addFacePath, destination)
@@ -29,7 +29,7 @@ copy(addFacePath, destination)
 
 # people.addPerson(Person(person_name, destination + "/" + addFacePath.split("/")[-1]))
 
-people_dict[person_name] = destination
+people_dict[image_id] = [person_name, "src/model/images/" + addFacePath.split("/")[-1]]
 
 with open("src/model/serializeStorage.txt", "w") as file:
     json.dump(people_dict, file)

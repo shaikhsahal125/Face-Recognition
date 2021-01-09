@@ -30,6 +30,11 @@
             <Font name="Arial Bold Italic" size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="nameInput" layoutX="173.0" layoutY="187.0" prefHeight="27.0" prefWidth="153.0" promptText="Enter name here" />
+      <TextField fx:id="nameInput" layoutX="187.0" layoutY="187.0" prefHeight="27.0" prefWidth="153.0" promptText="Enter name here" />
+      <Text fill="#f80101" fontSmoothingType="LCD" layoutX="43.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note: If you add an image file that already exist in the system, it will be overridden.">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

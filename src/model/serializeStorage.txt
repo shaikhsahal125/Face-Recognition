@@ -1,0 +1,1 @@
+{"0": ["cat", "src/model/images/catTuring.jpeg"], "1": ["tom and jerry", "src/model/images/tj.jpg"], "2": ["chai", "src/model/images/c3.jpg"]}
