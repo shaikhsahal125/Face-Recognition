@@ -36,5 +36,10 @@
             <Font name="Times New Roman Bold Italic" size="15.0" />
          </font>
       </Text>
+      <Button fx:id="backBtn" layoutX="22.0" layoutY="20.0" mnemonicParsing="false" onAction="#goBack" text="Back">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
