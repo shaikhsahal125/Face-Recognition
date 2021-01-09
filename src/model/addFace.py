@@ -12,13 +12,17 @@ addFacePath = sys.argv[2]
 # people = People()
 people_dict = {}
 
-with open("src/model/serializeStorage.txt", "r") as file:
-    people_dict = json.load(file)
-    file.close()
+try:
+    with open("src/model/serializeStorage.txt", "r") as file:
+        people_dict = json.load(file)
+        file.close()
+except:
+    print("Empty serialized storage file")
+    pass
 
-print(people_dict)
+# print(people_dict)
 
-print(os.getcwd())
+
 destination = os.getcwd() + "/src/model/images"
 copy(addFacePath, destination)
 # print(destination + "/" + addFacePath.split("/")[-1])

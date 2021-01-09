@@ -45,17 +45,24 @@ public class HomePageController {
 
     public void addFaceBtnCtrl(ActionEvent event) throws IOException {
         System.out.println("Add face Btn clicked");
-        ProcessBuilder processBuilder = new ProcessBuilder("python3", "src/model/addFace.py", "Sahal", "/Users/sahalshaih/Downloads/catTuring.jpeg").redirectErrorStream(true);
-        Process process = processBuilder.start();
 
-        Reader reader = new InputStreamReader(process.getInputStream());
-        BufferedReader bufferedReader = new BufferedReader(reader);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/view/add_face.fxml"));
 
-        String s;
+        AnchorPane root = (AnchorPane) loader.load();
+        AddFaceController afc = loader.getController();
+        afc.start();
 
-        while ((s = bufferedReader.readLine()) != null) {
-            System.out.println(s);
-        }
+        Stage newStage = new Stage();
+        Scene scene = new Scene(root);
+        newStage.setScene(scene);
+        newStage.setTitle("Add Face");
+        newStage.setResizable(false);
+        newStage.show();
+
+        Stage currStage = (Stage) addFaceBtn.getScene().getWindow();
+        currStage.close();
+
     }
 
 }
