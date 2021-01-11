@@ -23,13 +23,13 @@ except:
 # print(people_dict)
 image_id = len(people_dict)
 
-destination = os.getcwd() + "/src/model/images"
+destination = os.getcwd() + "/src/images"
 copy(addFacePath, destination)
 # print(destination + "/" + addFacePath.split("/")[-1])
 
 # people.addPerson(Person(person_name, destination + "/" + addFacePath.split("/")[-1]))
 
-people_dict[image_id] = [person_name, "src/model/images/" + addFacePath.split("/")[-1]]
+people_dict[image_id] = [person_name, "src/images/" + addFacePath.split("/")[-1]]
 
 with open("src/model/serializeStorage.txt", "w") as file:
     json.dump(people_dict, file)

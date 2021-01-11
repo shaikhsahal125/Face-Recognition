@@ -1,1 +1,1 @@
-{"0": ["cat", "src/model/images/catTuring.jpeg"], "1": ["tom and jerry", "src/model/images/tj.jpg"], "2": ["chai", "src/model/images/c3.jpg"], "3": ["catty", "src/model/images/catTuring.jpeg"], "4": ["cat", "src/model/images/catTuring.jpeg"]}
+{"0": ["Sahal", "src/images/e9ce4e11-f16a-4cae-af82-e48af406f777.JPG"], "1": ["Aiyub", "src/images/7D682624-CF49-4B75-9F29-797B36F7CCCE.jpeg"], "2": ["Suha", "src/images/A2AB2C53-A586-47BD-BE34-A8A88B410AF9.jpeg"], "3": ["Fazal", "src/images/7A91ADE4-DAFA-4932-A1E1-198C5CC0793D.jpeg"]}
